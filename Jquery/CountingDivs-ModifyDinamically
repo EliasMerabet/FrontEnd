@@ -1,0 +1,24 @@
+ $(document).ready(function () {
+    // FOR COUNTING NUMBER OF CHILDREN PER LAYER. SO WE CAN SIZE THE WIDTH DINAMICALLY. THE HEIGHT IS HANDLE WITH FLEX PROPERTIES BY CSS.
+        contador = 0;
+        salir = false;
+        while (!salir) {
+            if ($('#level2-' + contador).length) {
+                var value = $('#level2-' + contador).attr('data-value');
+                drawGradient('level2-' + contador, value, '#ffeb3b', '#fffde7');
+                drawWidth('bar2-' + contador, value);
+            } else {
+                salir = true;
+            }
+            contador++;
+}
+
+// FROM SIZE OF LAYER AND NUMBER OF CHILDREN, RETURNS WITDH FOR EACH ELEMENT DINAMICALLY
+        $(".level2").each(function () {
+            var nivel = this.id;
+            var hijosNivel = ($("#" + nivel).find(".layer3").length);
+            var ancho = (100 / hijosNivel);
+            $("#" + nivel).find(".layer3").css("width", ancho + "%");
+        });
+        
+});
