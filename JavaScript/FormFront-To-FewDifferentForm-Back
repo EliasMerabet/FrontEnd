@@ -1,0 +1,5 @@
+function action(table, option1) 
+{
+	document.getElementById("adminOutOfModel").action = "/admin/db/" + table + "/?option="option1;
+	document.getElementById("adminOutOfModel").submit();
+}
