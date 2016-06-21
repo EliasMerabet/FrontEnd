@@ -1,0 +1,31 @@
+<div id="modalDeleteYesNo" style="display:none; top:600px; left:300px; position:absolute;">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header" style="text-align:center">
+		                    <h4>Confirmación de Borrado</h4>
+		                </div>
+		                <div class="modal-body" style="text-align:center">
+		                    <h3>A continuación se van a eliminar todos los ficheros seleccionados.</h3>
+		                    <h3>¿Está Seguro?</h3>
+		                    <button id="modalDeleteYes" class="btn">Si</button>
+		                    <button id="modalDeleteNo" data-dismiss="modal" class="btn">No</button>
+		                </div>
+		            </div>
+		        </div>
+	    	</div>
+
+LUEGO YA PUEDES OCULTARLA O MOSTRARLA SEGÚN NECESIDADES DESDE CODIGO.
+
+function deleteYesNo(table) 
+{
+	alert("/admin/db/" + table + "/?option=delete")
+	document.getElementById("modalDeleteYesNo").style.display = "block";
+	document.getElementById('modalDeleteYes').onclick = function() {
+		document.getElementById("adminOutOfModel").action = "/admin/db/" + table + "/?option=delete";
+		document.getElementById("adminOutOfModel").submit();
+		document.getElementById("modalDeleteYesNo").style.display = "none";
+	};
+	document.getElementById('modalDeleteNo').onclick = function() {
+		document.getElementById("modalDeleteYesNo").style.display = "none";
+	};
+}
