@@ -1,0 +1,8 @@
+document.getElementById(elementId).style.background = "linear-gradient(to right, " + color + " 0%, " + color + " " + (value – 20) + "%, rgba(255,255,255,1) " + value + "%, rgba(255,255,255,1) 100%)";
+ 
+1º valor – inicio de color. Ej : 0.
+2º valor – hasta cuando empieza a degradar. Ej : 50.
+3º valor – donde empieza el segundo color. Ej : 70.
+4º valor – donde termina el 2 color. Ej : 100.
+
+No defino el valor entre 50 y 70, es decir, entre el fin del primer valor y el inicio del segundo. Eso es lo que esta propiedad asigna automáticamente en función de los otros 4 valores.
