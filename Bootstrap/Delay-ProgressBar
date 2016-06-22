@@ -1,0 +1,7 @@
+    .progress-bar{
+	      animation:10s;
+        animation-delay:4s;
+    }
+
+transition:10s;
+transition-delay:2s;
