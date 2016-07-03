@@ -1,0 +1,14 @@
+    $(function () {
+        $(".sortable").sortable({
+            placeholder: {
+                element: function (currentItem) {
+                    return $('<span class="boxInnerHolder ' + $(currentItem).attr('class').split(' ')[0] + ' "></span>');
+                },
+                update: function (container, p) {
+                    return;
+                }
+            },
+            opacity: 0.5
+        });
+        $(".sortable").disableSelection();
+    });
