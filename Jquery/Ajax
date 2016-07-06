@@ -2,23 +2,19 @@
             url: rootUrl + '/Controller/Action',
             type: "POST",
             contentType: 'application/json',
-            data: "{ 'id':'" + id + "', 'user': '" +user+ "'}",
+            data: "{ 'name':'" + name + "', 'surname': '" +surname+ "'}",
             dataType: 'json',
             success: function (result) {
                 if (result) {
                     //show that id is valid
-                    $('#bgLoading').hide();
-                    $('.ajax-loader').hide();
+                    $('.spinner_loader').hide();
                     if (result.result == "fallo") {
-                       $(".messageNotifSuccess").html("<img src='" + rootVar + "/Content/Images/success.png' width='43' height='42' style='vertical-align: middle; margin-right: 20px;' />Regla Borrada");
-                        $(".messageNotifSuccess").show().delay(2000).fadeOut(500);
-                        $("#bgNotification").show().delay(2000).fadeOut(500);
-                        setTimeout(function () { window.location.replace(rootUrl + "/Rules/ReglasWebView"); });
+                       $(".success").html("div_modal_a_mostrar");
+                        $(".success").show().delay(2000).fadeOut(500);
+                        setTimeout(function () { window.location.replace(rootUrl + "/Controller/Action"); });
                     } else {
-                        $('#bgLoading').hide();
-                        $('.ajax-loader').hide();
-                        $(".messageNotifError").show();
-                        $("#bgNotification").show();
+                        $('.spinner_loader').hide();
+                        $(".notError").show();
                     }
 
                 }
