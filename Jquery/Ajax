@@ -1,0 +1,29 @@
+	$.ajax({
+            url: rootUrl + '/Controller/Action',
+            type: "POST",
+            contentType: 'application/json',
+            data: "{ 'id':'" + id + "', 'user': '" +user+ "'}",
+            dataType: 'json',
+            success: function (result) {
+                if (result) {
+                    //show that id is valid
+                    $('#bgLoading').hide();
+                    $('.ajax-loader').hide();
+                    if (result.result == "fallo") {
+                       $(".messageNotifSuccess").html("<img src='" + rootVar + "/Content/Images/success.png' width='43' height='42' style='vertical-align: middle; margin-right: 20px;' />Regla Borrada");
+                        $(".messageNotifSuccess").show().delay(2000).fadeOut(500);
+                        $("#bgNotification").show().delay(2000).fadeOut(500);
+                        setTimeout(function () { window.location.replace(rootUrl + "/Rules/ReglasWebView"); });
+                    } else {
+                        $('#bgLoading').hide();
+                        $('.ajax-loader').hide();
+                        $(".messageNotifError").show();
+                        $("#bgNotification").show();
+                    }
+
+                }
+           },
+            error: function (ex) {
+                console.log('Error');
+            }
+        });
