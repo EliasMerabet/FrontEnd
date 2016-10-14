@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+    <meta name="description" content="Elias Merabet Ponton. Desarrollador Web. Trabajos profesionales. Marketing Online, Fidelización de Clientes, SEO, Analisis DAFO, Social Marketing" />
+    <meta name="keywords" content="Diseño Web, Desarrollo Web, Marketing Online, Profesional, Web, Calidad, Diseño, ">
+    <meta name="author" content="Kenzo">
+    
+    <title>Elias Merabet Ponton</title>
+    
+<style>
+    @import'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+    
+     *{margin:0;padding:0}
+     body{overflow:hidden;}
+     
+     #nav-fix{width:40px;top:20%;position:fixed;right:0;z-index:9999}
+     
+     #nav-fix li{height:20px;width:20px;border-radius:50%;box-shadow:inset 0 0 5px #000;margin:10px;list-style:none;position:relative;
+     transition:all 250ms ease;color:#fff}
+     
+     #nav-fix li span{position:relative;background:#000;font-size:13px;height:24px;border-radius:2px;width:90px;text-align:center;line-height:24px;
+     margin-left:-180px;top:-22px;transition:all 1250ms ease;opacity:0}
+     
+     #nav-fix li span:after{position:absolute;height:20px;width:180px;margin-left:-180px;background:#000;top:}
+     
+     #nav-fix li:hover span{margin-left:-50px;opacity:1; width: 100px;}
+     
+     #nav-fix li label{display:block;height:20px;width:20px}
+     
+     #nav-fix li label i.fa{height:20px;width:20px;text-align:center;line-height:20px;font-size:10px}
+     
+     .tab{height:100%;width:100%;position:absolute;box-sizing:border-box;transition:all 1000ms ease;padding:30px 50px}
+     .tab1{background:#C0C0C0;top:0%}
+     .tab2{background:#6B8E23;top:100%}
+     .tab3{background:#BDB76B;top:200%}
+     .tab4{background:#008B8B;top:300%}
+     
+     input[type="radio"]{display:none}
+     
+     #nav-fix li:hover,#tab1:checked~#nav-fix li:nth-child(1),#tab2:checked~#nav-fix li:nth-child(2),#tab3:checked~#nav-fix li:nth-child(3),
+     #tab4:checked~#nav-fix li:nth-child(4)
+     {box-shadow:inset 0 0 15px #000}#tab1:checked~.tab1{top:0%}#tab1:checked~.tab2{top:100%}#tab1:checked~.tab3{top:200%}
+     #tab1:checked~.tab4{top:300%}#tab2:checked~.tab1{top:-100%}#tab2:checked~.tab2{top:0%}#tab2:checked~.tab3{top:100%}#tab2:checked~.tab4{top:200%}
+     #tab3:checked~.tab1{top:-200%}#tab3:checked~.tab2{top:-100%}#tab3:checked~.tab3{top:0%}#tab3:checked~.tab4{top:100%}#tab4:checked~.tab1{top:-300%}
+     #tab4:checked~.tab2{top:-200%}#tab4:checked~.tab3{top:-100%}#tab4:checked~.tab4{top:0%}
+     
+     .title{width:270px;margin:0 auto;text-align:center;line-height:40px;position:relative;color:#FFF;margin-bottom:10px;padding-bottom:10px;
+     font-size:30px}
+     
+	@media(max-width:720px){.tab{padding:10px 35px}} 
+	
+	.add1{margin: 60px auto;width:750px} 
+</style>
+    
+</head>
+
+      
+<body>
+<input type="radio" id="tab1" checked name="tab">
+<input type="radio" id="tab2" name="tab">
+<input type="radio" id="tab3" name="tab">
+<input type="radio" id="tab4" name="tab">
+
+<div id="nav-fix">
+
+	<ul>
+	
+		<li>
+			<label for="tab1">
+				<i class="fa fa-home"></i>
+			</label> 
+			<span> Pagina 1 </span> 
+		</li>
+		
+		<li>
+			<label for="tab2">
+				<i class="fa fa-dropbox"></i>
+			</label> 
+			<span> Pagina 2 </span> 
+		</li>
+		
+		<li>
+			<label for="tab3">
+				<i class="fa fa-user"></i>
+			</label> 
+			<span> Pagina 3 </span> 
+		</li>
+		
+		<li>
+			<label for="tab4">
+				<i class="fa fa-phone"></i>
+			</label> 
+			<span> Pagina 4 </span> 
+		</li>
+	
+	</ul>
+
+</div>
+
+	<div class="tab tab1">
+		<h2 class="title">Pagina 1</h2>
+	</div>
+	
+	<div class="tab tab2">
+		<h2 class="title">Pagina 2</h2>
+	</div>
+	
+	<div class="tab tab3">
+		<h2 class="title">Pagina 3</h2>
+	</div>
+	
+	<div class="tab tab4">
+		<h2 class="title">Pagina 4</h2>
+</div>
+
+</body>
+</html>
