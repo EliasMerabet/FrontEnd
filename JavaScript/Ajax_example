@@ -1,0 +1,33 @@
+    function ajax_call(url, id_contenedor){
+    var pagina_required= false
+    if (window.XMLHttpRequest) 
+    {// Mozilla
+       pagina_required= new XMLHttpRequest()
+    } 
+    else if (window.ActiveXObject)
+    { // Internet Explorer
+       try {
+                   pagina_required= new ActiveXObject("Msxml2.XMLHTTP")
+           } 
+       catch (e){ // old version
+                   try {
+                         pagina_required= new ActiveXObject("Microsoft.XMLHTTP")
+                       }
+                   catch (e){}
+                }
+    }
+    else
+    return false
+    pagina_required.onreadystatechange=function()
+    { // response function
+            loadPage(pagina_requerida, id_contenedor)
+    }
+    pagina_required.open('GET', url, true) // set methods open and send
+    pagina_required.send(null)
+    }
+    // Correct. Setting information in html.    
+    
+    function loadPage(pagina_required, id_contenedor){
+    if (pagina_required.readyState == 4 && (pagina_required.status==200 || window.location.href.indexOf("http")==-1))
+    document.getElementById(id_contenedor).innerHTML=pagina_required.responseText
+    }
