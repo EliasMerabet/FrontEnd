@@ -1,0 +1,26 @@
+<div class="" style="background-image: url("your_image.jpg");">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="" style="width: 400px;">
+                            <!-- HERE YOUR SCRIPT COMING FROM GOOGLE MAP -->
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7 map-content">
+                        <ul class="row">
+                            <li class="col-sm-6">
+                                <address>
+                                    <h5>Title</h5>
+                                    <p>Phone</p></br>
+                                    <p>address</p></br>
+                                    <p>other data</p></br>
+                                </address>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
