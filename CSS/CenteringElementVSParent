@@ -1,0 +1,71 @@
+ <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="false" Width="1000px" AllowPaging="True" PageSize="8" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr" >
+        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+        <AlternatingRowStyle CssClass="alt" ></AlternatingRowStyle> 
+        <PagerStyle CssClass="pgr"></PagerStyle>
+ </GridView>
+
+
+    .Grid 
+    {
+    background-color: #fff; 
+    
+    // THIS PART IS DOING THE MAGIC
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    // PART BEHIND IS DOING THE MAGIC.
+    
+    border: solid 1px #525252; 
+    border-collapse:collapse; 
+    font-family:Calibri; 
+    color: #474747; 
+    float:left; 
+    text-align: center;
+    }
+    
+    .Grid td 
+    { 
+    padding: 2px; 
+    border: solid 1px #c1c1c1; 
+    } 
+    
+    .Grid th  {
+    padding : 4px 2px;
+    color: #fff;
+    background: #4bc970 url(Images/grid-header.png) repeat-x top;
+    border-left: solid 1px #525252;
+    font-size: 0.9em; } 
+    
+    .Grid .alt {
+    background: #fcfcfc url(Images/grid-alt.png) repeat-x top; 
+    } 
+      
+      .Grid .pgr 
+      {
+      background: #363670 url(Images/grid-pgr.png) repeat-x top; 
+      } 
+      
+      .Grid .pgr table 
+      { 
+      margin: 3px 0; 
+      } 
+      
+      .Grid .pgr td 
+      { 
+      border-width: 0; 
+      padding: 0 6px; 
+      border-left: solid 1px #666; 
+      font-weight: bold; 
+      color: #fff; line-height: 12px; 
+      }  
+      
+      .Grid .pgr a { 
+      color: Gray; 
+      text-decoration: none; 
+      }
+      
+      .Grid .pgr a:hover { 
+      color: #000; 
+      text-decoration: none; 
+      }
