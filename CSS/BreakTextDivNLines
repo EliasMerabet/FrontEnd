@@ -1,0 +1,10 @@
+.postIndex 
+{
+  line-height: 20px;
+  height: 160px;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+}
