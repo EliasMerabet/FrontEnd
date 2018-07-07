@@ -1,0 +1,17 @@
+function Button_Click1(id) {
+
+    var can = parseInt(localStorage.getItem(id));
+
+    if (can > 0) {
+        localStorage.setItem(id, (can + 1));
+    } else {
+        localStorage.setItem(id, 1);
+    }
+    
+    //var data = localStorage.getItem(id);
+
+    //for (var i = 0, iC = localStorage.length; i < iC; ++i) {
+    //    var storageKey = localStorage.key(i);
+    //    alert(storageKey + ': ' + localStorage.getItem(storageKey));
+    //}
+}
